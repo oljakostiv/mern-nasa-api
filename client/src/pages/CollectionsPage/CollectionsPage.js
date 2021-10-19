@@ -142,7 +142,7 @@ export default class CollectionsPage extends Component {
                      {/*<Pagination totalRecords={1000} pageLimit={10}*/}
                 {/*pageNeighbours={2} onPageChanged={this.onPageChanged} />*/}
                 </div>
-                <Footer />
+                {/*<Footer />*/}
                 <ParticleContainer />
             </React.StrictMode>
         );
