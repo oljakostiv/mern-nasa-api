@@ -1,37 +1,24 @@
 const express = require('express');
-const config = require('config');
+const config = require('./config/default.json');
 const mongoose = require('mongoose');
 
-mongoose.connect(config.get('mongoUri'));
+mongoose.connect(config.mongoUri,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true});
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use('/api/auth', require('./routes/auth.routes'))
+app.use('/api/auth', require('./routes/auth.routes'));
+app.use('/api/collection', require('./routes/collection.routes'));
 
-const PORT = config.get('port') || 5000
-
-// async function start() {
-//     try {
-//         await mongoose.connect(config.get('mongoUri'), {
-//             useNewUrlParser: true,
-//             useUnifiedTopology: true,
-//             useCreateIndex: true
-//         })
-//         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
-//     } catch (e) {
-//         console.log('Server Error', e.message)
-//         process.exit(1)
-//     }
-// }
-//
-// start()
+const PORT = config.port || 5000
 
 app.listen(PORT, (err) => {
     if (err) {
-        console.log(err);
+        console.log('Server Error', err);
     }
         console.log(`App has been started on port ${PORT}...`);
 });
