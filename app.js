@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.use('/api/auth', require('./routes/auth.routes'));
-app.use('/api/collection', require('./routes/collection.routes'));
 
 const PORT = config.port || 5000
 
