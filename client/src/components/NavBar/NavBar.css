@@ -1,0 +1,12 @@
+.navbar {
+    background-image: url("../../images/Nasty Nebula Hubble.jpg");
+    background-size: cover;
+    background-position: top;
+    border-bottom: 1px gray dashed;
+}
+
+.brand-logo img{
+    height: 50px;
+
+    margin-top: 5px;
+}

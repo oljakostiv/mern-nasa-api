@@ -1,0 +1,24 @@
+.m5r {
+    margin-top: 5rem;
+}
+
+.btn-text {
+    width: 200px;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: inherit;
+    color: #000523;
+}
+
+.input-color {
+    color: #e8eaf6;
+}
+
+.btn-floating {
+    line-height: 28px;
+}
+
+.t15 {
+    font-size: 50px;
+    color: #fff;
+}

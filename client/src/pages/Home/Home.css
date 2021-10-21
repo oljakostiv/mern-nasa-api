@@ -1,0 +1,46 @@
+.tc{
+    text-align: center;
+}
+
+.text-color{
+    color: #1a237e;
+}
+
+.position {
+    width: 50%;
+    margin: 0 25%;
+}
+
+.backend {
+    background-image: url("../../images/nasa-stars-hd-1080P-wallpaper.jpg");
+    background-position: top;
+    min-height: 650px;
+}
+
+.my-coll-backend {
+    background-image: url('../../images/Nasty Nebula Hubble.jpg');
+    background-position: center;
+    border-top: 2px gray dashed;
+}
+
+.my-coll {
+    min-height: 650px;
+    padding-top: 50px;
+}
+
+
+
+.title-my-coll {
+    height: 70px;
+    width: 1000px;
+    background-image: url("../../images/sky+photo+for+website+home+page.jpeg");
+}
+
+h2 {
+font-weight: bold;
+}
+
+.create-coll {
+    color: white;
+    font-style: italic;
+}
