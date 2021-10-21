@@ -1,17 +1,9 @@
 import './Home.css';
 import CreateCollectionForm from "../../components/Collection/CreateCollectionForm";
 import Collections from "../../components/Collection/Collections";
-import FetchedCollections from "../../components/Collection/FetchedCollections";
+import React from "react";
 
 export default function Home() {
-    // let [collection, setCollection] = useState([]);
-    // let [flag, setFlag] = useState(false);
-
-    // useEffect(() => {
-    //     getCollection().then(value => {
-    //         setCollection([...value.data])
-    //     })
-    // }, []);
     return (
         <div>
             <div className="backend">
@@ -32,17 +24,7 @@ export default function Home() {
                                         volcanoes, and evidence that it was even more active in the past.</p>
                                 </div>
                                 <div className="card-action tc">
-                                    {/*<button onClick={()=> {getCollection().then(value => setColection(value.data))*/}
-                                    {/*setFlag(!flag)}}>Open Mars!</button>*/}
-
-                                    {/*{flag && <Collection key={collection.id} collection={collection}/>}*/}
-                                    {/*<a href="/">Open Mars!</a>*/}
-                                    {/*<button onClick={()=> {collection.map(value => <h5 key={value.id}></h5>)}}>Open Mars!</button>*/}
-
-                                    {/*{flag && <Collection key={collection.id} collection={collection}/>}*/}
-                                    {/*<a href="/">Open Mars!</a>*/}
-
-                                    <FetchedCollections/>
+                                    <a href="/collections">Open Mars!</a>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +33,7 @@ export default function Home() {
             </div>
             <div className="my-coll-backend">
                 <div className="my-coll">
-                    <div id="collections" className="tc title-my-coll"><h2>My personal collections:</h2></div>
+                    <div id="my-collections" className="tc title-my-coll"><h2>My personal collections:</h2></div>
                     <div className="container card-action tc">
                         <Collections />
                     </div>

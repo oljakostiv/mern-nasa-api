@@ -17,9 +17,9 @@ export const Navbar = () => {
     return (
         <nav>
             <div className="nav-wrapper navbar" style={{ padding: '0 2rem' }}>
-                <span className="brand-logo"><img alt="logo" src="https://lh3.googleusercontent.com/proxy/4ctXE9F6h3QbMj2-LnvYTLWEKT0cBU5UfiNR-OM6eXWYDhyqSOhcsNb4G5xREvFPclfyuX919QSFeyw9Mm30v1BQhOPYxeQ"/></span>
+                <span className="brand-logo"><img alt="logo" src="https://mcdn.wallpapersafari.com/medium/72/34/ECT6hw.png"/></span>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><NavLink to="/collections">My collections</NavLink></li>
+                    <li><NavLink to="/collections">Collections</NavLink></li>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><a href="/" onClick={logoutHandler}>Logout</a></li>
                 </ul>

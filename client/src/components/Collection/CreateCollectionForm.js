@@ -51,7 +51,7 @@ class CreateCollectionForm extends React.Component {
                                onChange={this.changeInputHandler}/>
                     </div>
                     <button className="btn-floating waves-effect waves-light black" type="submit">
-                        <span className="t15">+</span>
+                        <a href="#my-collections" className="t15">+</a>
                     </button>
                 </div>
             </form>

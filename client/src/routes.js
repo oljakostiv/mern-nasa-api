@@ -13,7 +13,7 @@ export const useRoutes = isAuthenticated => {
                     <Home />
                 </Route>
                 <Route path="/collections" exact>
-                    {/*<CollectionsPage my coll />*/}
+                    <CollectionsPage />
                 </Route>
                 <Redirect to="/" />
             </Switch>
