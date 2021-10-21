@@ -1,20 +1,17 @@
-import React, {useEffect, useState} from "react";
 import './Home.css';
-import {Collection} from "mongoose";
-import {getCollection} from "../../components/Servises/Api";
 import CreateCollectionForm from "../../components/Collection/CreateCollectionForm";
 import Collections from "../../components/Collection/Collections";
 import FetchedCollections from "../../components/Collection/FetchedCollections";
 
 export default function Home() {
-    let [collection, setCollection] = useState([]);
+    // let [collection, setCollection] = useState([]);
     // let [flag, setFlag] = useState(false);
 
-    useEffect(() => {
-        getCollection().then(value => {
-            setCollection([...value.data])
-        })
-    }, []);
+    // useEffect(() => {
+    //     getCollection().then(value => {
+    //         setCollection([...value.data])
+    //     })
+    // }, []);
     return (
         <div>
             <div className="backend">
@@ -44,7 +41,8 @@ export default function Home() {
 
                                     {/*{flag && <Collection key={collection.id} collection={collection}/>}*/}
                                     {/*<a href="/">Open Mars!</a>*/}
-                                    <FetchedCollections collections={[]}/>
+
+                                    <FetchedCollections/>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +53,7 @@ export default function Home() {
                 <div className="my-coll">
                     <div id="collections" className="tc title-my-coll"><h2>My personal collections:</h2></div>
                     <div className="container card-action tc">
-                        <Collections collections={[]}/>
+                        <Collections />
                     </div>
                 </div>
             </div>
