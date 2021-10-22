@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 import ParticleContainer from "../CollectionsPage/ParticleContainer";
 import ResultsContainer from "../CollectionsPage/ResultsContainer";
@@ -17,7 +17,6 @@ export default class CollectionsPage extends Component {
         this.state = {
             searchResults: [],
             maxSol: DEFAULT_MAX_SOL,
-            camera: '',
             errorMessage: '',
             currentPage: 0,
             totalPages: 0
@@ -27,24 +26,24 @@ export default class CollectionsPage extends Component {
         // this.onPageChanged = this.onPageChanged.bind(this);
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this._isMounted = true;
         if (this._isMounted) {
             this.doSearch('', DEFAULT_MAX_SOL);
         }
     }
 
-    componentWillUnmount () {
+    componentWillUnmount() {
         this._isMounted = false;
     }
 
-    getYesterdaysDate () {
+    getYesterdaysDate() {
         let date = new Date();
         date.setDate(date.getDate() - 1);
         return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
     }
 
-    doSearch (cameraInput, solInput) {
+    doSearch(cameraInput, solInput) {
         let yesterday = this.getYesterdaysDate();
         let params = {};
         params = {
@@ -64,7 +63,7 @@ export default class CollectionsPage extends Component {
             }
             if (cameraInput) {
                 let originalCameraInput = cameraInput;
-                cameraInput = originalCameraInput.replace('');
+                cameraInput = originalCameraInput.replace(/[^A-Za-z]/g, '');
                 params = {
                     sol: solInput,
                     camera: cameraInput,
@@ -79,7 +78,7 @@ export default class CollectionsPage extends Component {
                 };
             }
         }
-        axios.get(MAIN_API_URL, { params })
+        axios.get(MAIN_API_URL, {params})
             .then(res => {
                 let searchResults = res.data.photos;
                 if (searchResults && searchResults.length) {
@@ -112,37 +111,41 @@ export default class CollectionsPage extends Component {
             });
     }
 
-    /* Called with data of the current pagination state only when the current page changes. */
-      onPageChanged = data => {
-          let { searchResults } = this.state;
-          const { currentPage, totalPages, pageLimit } = data;
-          const offset = (currentPage - 1) * pageLimit;
-          searchResults = searchResults.slice(offset, offset + pageLimit);
-          this.setState({
-              currentPage,
-              searchResults,
-              totalPages
-          });
-      }
+    // onPageChanged = data => {
+    //     let {searchResults} = this.state;
+    //     const {currentPage, totalPages, pageLimit} = data;
+    //     const offset = (currentPage - 1) * pageLimit;
+    //     searchResults = searchResults.slice(offset, offset + pageLimit);
+    //     this.setState({
+    //         currentPage,
+    //         searchResults,
+    //         totalPages
+    //     });
+    //
+    // const indexOfLastPost = currentPage * postsPerPage;
+    //     const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    //     const searchResults = searchResults.slice(indexOfFirstPost, indexOfLastPost);
+    //
+    //     const paginate = pageNumber => setCurrentPage(pageNumber)
+    // }
 
-    render () {
+
+    render() {
         return (
             <React.StrictMode>
                 <div className="content">
                     {this.state.errorMessage ?
                         <>
-                            <Message message={this.state.errorMessage} />
-                            <Search doSearch={this.doSearch} maxSol={this.state.searchResults} />
+                            <Message userMessage={this.state.errorMessage}/>
+                            <Search doSearch={this.doSearch} maxSol={this.state.maxSol}/>
                         </> :
                         <>
-                            <Search doSearch={this.doSearch} maxSol={this.state.maxSol} />
-                            <ResultsContainer searchResults={this.state.searchResults} />
+                            <Search doSearch={this.doSearch} maxSol={this.state.maxSol}/>
+                            <ResultsContainer searchResults={this.state.searchResults}/>
                         </>
                     }
-                {/*     <Pagination totalRecords={1000} pageLimit={10}*/}
-                {/*pageNeighbours={2} onPageChanged={this.onPageChanged} />*/}
                 </div>
-                <ParticleContainer />
+                <ParticleContainer/>
             </React.StrictMode>
         );
     }

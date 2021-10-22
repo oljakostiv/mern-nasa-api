@@ -15,10 +15,6 @@ export default class Result extends Component {
         this.handleToggleModal = this.handleToggleModal.bind(this);
     }
 
-    /* Clear the setTimeout subscription for handleLeave() (shine on cards) so we don't get this:
-  Warning: Can’t call setState (or forceUpdate) on an unmounted component.
-  This is a no-op, but it indicates a memory leak in your application.
-  To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method. */
     componentWillUnmount () {
         if (this.timeout) {
             clearTimeout(this.timeout);
@@ -42,12 +38,12 @@ export default class Result extends Component {
     handleToggleModal (row) {
         const modalid = `modal-${row['id']}`;
         const modal = document.getElementById(modalid);
-        let zoom = 'modal-content-out'; // default is hidden (zoomed out)
+        let zoom = 'modal-content-out';
         if (this.state.zoomclass === zoom) {
-            zoom = 'modal-content'; // its hidden so let's show it.
+            zoom = 'modal-content';
             modal.style.display = 'block';
         } else {
-            zoom = 'modal-content-out'; // it is showing so let's hide it.
+            zoom = 'modal-content-out';
         }
         this.setState({
             zoomclass: zoom

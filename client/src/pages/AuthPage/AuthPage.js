@@ -44,7 +44,7 @@ export const AuthPage = () => {
         <div className="row">
             <div className="col s6 offset-s3">
                 <h1>Mars Rover Photos</h1>
-                <div className="card blue darken-1">
+                <div className="card blue-grey darken-2">
                     <div className="card-content white-text">
                         <span className="card-title">Authorisation</span>
 
@@ -79,7 +79,7 @@ export const AuthPage = () => {
                     </div>
                     <div className="card-action">
                         <button
-                            className="btn yellow darken-4"
+                            className="btn deep-purple lighten-2"
                             style={{marginRight: 10}}
                             onClick={loginHandler}
                             disabled={loading}

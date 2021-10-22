@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../pages/CollectionsPage/style.css'
 
 export default function UserMessage (props) {
-    let message = props.message;
-    if (typeof message === 'object') {
-        message = props.message.message;
+    let userMessage = props.userMessage;
+    if (typeof userMessage === 'object') {
+        userMessage = props.userMessage.message;
     }
     return (
-        <div className="user-message">{message}</div>
+        <div className="user-message">{userMessage}</div>
     );
 }
 
 UserMessage.propTypes = {
-    message: PropTypes.string
+    userMessage: PropTypes.string
 };

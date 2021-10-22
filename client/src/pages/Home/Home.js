@@ -1,5 +1,4 @@
 import './Home.css';
-import CreateCollectionForm from "../../components/Collection/CreateCollectionForm";
 import Collections from "../../components/Collection/Collections";
 import React from "react";
 
@@ -8,12 +7,12 @@ export default function Home() {
         <div>
             <div className="backend">
                 <div className="container">
-                    <div className="create-coll">
-                        <h5>Create my collection:</h5>
-                        <CreateCollectionForm/>
-                    </div>
+                    {/*<div className="create-coll">*/}
+                    {/*    <h5>Create my collection:</h5>*/}
+                    {/*    <CreateCollectionForm/>*/}
+                    {/*</div>*/}
                     <div className="position">
-                        <div className="col s12 m6">
+                        <div className="col s12 p5r">
                             <div className="card blue-grey darken-1">
                                 <div className="card-content white-text">
                                     <span className="card-title">Welcome!</span>
@@ -24,7 +23,7 @@ export default function Home() {
                                         volcanoes, and evidence that it was even more active in the past.</p>
                                 </div>
                                 <div className="card-action tc">
-                                    <a href="/collections">Open Mars!</a>
+                                    <a href="/collections"><span className="text-color">Open Mars!</span></a>
                                 </div>
                             </div>
                         </div>
