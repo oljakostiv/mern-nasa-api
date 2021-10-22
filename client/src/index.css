@@ -1,0 +1,42 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+.backend {
+  background-image: url("images/nasa-stars-hd-1080P-wallpaper.jpg");
+  background-position: top;
+  min-height: 650px;
+}
+
+input.yellow-input {
+  border-bottom: 1px solid #fff!important;
+  box-shadow: 0 1px 0 0 #fff!important;
+}
+
+input.yellow-input + label {
+  color: #ffffff!important;
+}
+
+input.yellow-input:focus + label {
+  color: #ffeb3b!important;
+}
+
+input.yellow-input:focus {
+  border-bottom: 1px solid #ffeb3b!important;
+  box-shadow: 0 1px 0 0 #ffeb3b!important;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  background: #6B6788;
+  border: 2px solid currentColor;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2c3e50;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 6px 6px 0 0 currentColor;
+}
