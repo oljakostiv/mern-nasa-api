@@ -42,7 +42,7 @@ export const AuthPage = () => {
 
     return (
         <div className="row">
-            <div className="col s6 offset-s3">
+            <div className="col s6 deep-purple lighten-2">
                 <h1>Mars Rover Photos</h1>
                 <div className="card blue-grey darken-2">
                     <div className="card-content white-text">
