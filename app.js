@@ -1,23 +1,26 @@
 const express = require('express');
-const config = require('./config/default.json');
+const {PORT, mongoUri} = require('./config/variables');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const expressRateLimit = require('express-rate-limit');
 
-mongoose.connect(config.mongoUri,{
+mongoose.connect(mongoUri,{
     useNewUrlParser: true,
     useUnifiedTopology: true});
 
 const app = express();
 
 app.use(cors());
+app.use(expressRateLimit({
+    windowMs: 15 * 60 * 100,
+    max: 1000
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.use('/api/auth', require('./routes/auth.routes'));
-app.use('/collections', require('./routes/myCollections'));
-
-const PORT = config.port || 5000
+// app.use('/api/collections', require('./routes/my-collections'));
 
 app.listen(PORT, (err) => {
     if (err) {

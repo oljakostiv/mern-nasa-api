@@ -5,7 +5,6 @@ import ResultsContainer from "../CollectionsPage/ResultsContainer";
 import Message from "../../components/Massege/Massage";
 import Search from "../../components/Search/Search";
 import './style.css';
-import Pagination from "../../components/Pagination/Pagination";
 
 const MAIN_API_URL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos';
 const DEMO_KEY = 'DEMO_KEY';

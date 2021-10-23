@@ -71,7 +71,7 @@ export default class Result extends Component {
                      onClick={() => {this.handleToggleModal(row);}} style={{ display: 'none' }}>
                     <span className="close" onClick={() => {this.handleToggleModal(row);}}>&times;</span>
                     <div className="modal-frame center-align">
-                        <img id={`modalimage-${row['id']}`} className="modal-image" src={row['img_src']} />
+                        <img id={`modalimage-${row['id']}`} className="modal-image" alt='mars' src={row['img_src']} />
                     </div>
                 </div>
             </div>

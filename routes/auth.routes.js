@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const {check, validationResult} = require('express-validator');
 const jwt = require('jsonwebtoken');
 const router = Router();
-const config = require('config');
+const {jwtSecret} = require('../config/variables');
 const User = require('../dataBase/User');
 
 router.post(
@@ -77,7 +77,7 @@ router.post(
 
             const token = jwt.sign(
                 {userId: user.id},
-                config.get('jwtSecret'),
+                jwtSecret,
                 {expiresIn: '1h'}
             );
 
