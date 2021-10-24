@@ -1,4 +1,4 @@
-#Mars Rover Photos 
+#Mars Rover Photos! 
  
 Open [NASA Api](http://api.nasa.gov/) 
 
@@ -12,3 +12,10 @@ In the project directory, you can run:
 
 ![](src/images/homescreen.png)
 ![](src/images/collectionsscreen.png)
+
+## TODO:
+
+1. My collections
+2. Pagination
+
+[LinkedIn](https://www.linkedin.com/in/olha-kostiv-84918421a/)
