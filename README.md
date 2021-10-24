@@ -10,6 +10,7 @@ In the project directory, you can run:
 
 # Screen:
 
+![](client/src/images/authscreen.png)
 ![](client/src/images/homescreen.png)
 ![](client/src/images/collectionsscreen.png)
 
@@ -17,5 +18,6 @@ In the project directory, you can run:
 
 1. My collections
 2. Pagination
+3. Index files & all text in const
 
 [LinkedIn](https://www.linkedin.com/in/olha-kostiv-84918421a/)

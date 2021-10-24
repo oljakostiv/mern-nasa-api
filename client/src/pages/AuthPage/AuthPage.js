@@ -42,12 +42,11 @@ export const AuthPage = () => {
 
     return (
         <div className="row">
-            <div className="col offset-s3 s6 grid">
-                <h1 className='text-color center-align'>Mars Rover Photos</h1>
+            <div className="col offset-s3 s6 grid m5rm">
+                <h1 className='text-color center-align db'>Mars Rover Photos</h1>
                 <div className="card blue-grey darken-2">
-                    <div className="card-content white-text">
+                    <div className="card-content white-text center-block">
                         <span className="card-title">Authorisation</span>
-
                         <form action="/" method="post" encType="multipart/form-data">
                             <div className="input-field">
                                 <input

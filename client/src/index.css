@@ -41,6 +41,16 @@ input.yellow-input:focus {
     box-shadow: 6px 6px 0 0 currentColor;
 }
 
+@media (min-width: 1600px) {
+    .db {
+        display: none;
+    }
+
+    .m5rm {
+        margin-top: 5rem;
+    }
+}
+
 @media (max-width: 961px) {
     h2 {
         font-size: 2.5rem;
