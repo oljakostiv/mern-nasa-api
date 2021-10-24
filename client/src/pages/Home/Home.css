@@ -3,9 +3,10 @@
 }
 
 .text-color {
-    font-family:'Verdana', sans-serif !important;
-    text-shadow: 2px 2px 1px #2c3e50;
-    color: #000523;
+    font-family: 'Verdana', sans-serif !important;
+    text-shadow: 2px 2px 1px #6B6788;
+    color: #fff;
+    font-size: 20px;
 }
 
 .position {
@@ -15,6 +16,14 @@
 
 .p5r {
     padding-top: 5rem;
+}
+
+.card-backend {
+    background-image: url("../../images/190606-untitled-design-11.webp");
+    opacity: 0.6;
+    min-height: 40px;
+    padding-top: 5px;
+    max-width: 450px;
 }
 
 .backend {
@@ -27,14 +36,17 @@
     background-image: url('../../images/Nasty Nebula Hubble.jpg');
     background-position: center;
     border-top: 2px gray dashed;
+    border-bottom: 2px gray dashed;
 }
 
 .my-coll {
-    min-height: 650px;
+    min-height: 700px;
     padding-top: 50px;
 }
 
-
+.w {
+    color: #6B6788;
+}
 
 .title-my-coll {
     height: 70px;
@@ -42,11 +54,22 @@
     background-image: url("../../images/sky+photo+for+website+home+page.jpeg");
 }
 
+.title-my-coll-2 {
+    height: 70px;
+    width: 1000px;
+    background-image: url("../../images/Nasty Nebula Hubble.jpg");
+}
+
 h2 {
-font-weight: bold;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px #2c3e50;
 }
 
 .create-coll {
     color: white;
     font-style: italic;
+}
+
+.op {
+    opacity: 0.6;
 }

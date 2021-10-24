@@ -41,7 +41,7 @@ export default class Search extends Component {
         return (
             <form className="flex center-align pt-2">
                 <div className="flex-item pt-0">
-                    <label htmlFor="solInput" className="searchlabel pl-0">Sol:</label>
+                    <label htmlFor="solInput" className="search-label pl-0">Sol:</label>
                     <input
                         name="solInput"
                         id="solInput"
@@ -53,9 +53,10 @@ export default class Search extends Component {
                         onChange={this.handleSolChange}
                     />
                 </div>
+
                 <div className="flex-item pt-0">
                     <label htmlFor="cameraInput">Camera:</label>
-                    <select className="browser-default form-input"
+                    <select className="browser-default form-input op"
                             name="cameraInput"
                             value={this.state.cameraInput}
                             onChange={this.handleCameraSelected}>
@@ -69,6 +70,7 @@ export default class Search extends Component {
                         <option value="navcam">Navigation Camera</option>
                     </select>
                 </div>
+
                 <div className="flex-item pt-2">
                     <button className="form-input" type="button" onClick={this.handleSubmit}>Find Photos!</button>
                 </div>

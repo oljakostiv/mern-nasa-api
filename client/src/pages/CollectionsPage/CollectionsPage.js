@@ -22,11 +22,11 @@ export default class CollectionsPage extends Component {
         };
         this.getYesterdaysDate = this.getYesterdaysDate.bind(this);
         this.doSearch = this.doSearch.bind(this);
-        // this.onPageChanged = this.onPageChanged.bind(this);
     }
 
     componentDidMount() {
         this._isMounted = true;
+
         if (this._isMounted) {
             this.doSearch('', DEFAULT_MAX_SOL);
         }
@@ -39,6 +39,7 @@ export default class CollectionsPage extends Component {
     getYesterdaysDate() {
         let date = new Date();
         date.setDate(date.getDate() - 1);
+
         return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
     }
 
@@ -50,9 +51,11 @@ export default class CollectionsPage extends Component {
             earth_date: yesterday,
             page: 1
         };
+
         if (solInput) {
             let originalSolInput = solInput.toString();
             solInput = originalSolInput.replace(/\D/g, '');
+
             if (solInput !== originalSolInput) {
                 this.setState({
                     searchResults: [],
@@ -60,6 +63,7 @@ export default class CollectionsPage extends Component {
                 });
                 return;
             }
+
             if (cameraInput) {
                 let originalCameraInput = cameraInput;
                 cameraInput = originalCameraInput.replace(/[^A-Za-z]/g, '');
@@ -80,6 +84,7 @@ export default class CollectionsPage extends Component {
         axios.get(MAIN_API_URL, {params})
             .then(res => {
                 let searchResults = res.data.photos;
+
                 if (searchResults && searchResults.length) {
                     let maxSol = searchResults[0].rover.max_sol;
                     searchResults = Array.from(searchResults);
@@ -120,10 +125,10 @@ export default class CollectionsPage extends Component {
     //         searchResults,
     //         totalPages
     //     });
-    //
-    // const indexOfLastPost = currentPage * postsPerPage;
-    //     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    //     const searchResults = searchResults.slice(indexOfFirstPost, indexOfLastPost);
+    //or
+    // const indexOfLastColl = currentPage * collPerPage;
+    //     const indexOfFirstColl = indexOfLastColl - collPerPage;
+    //     const searchResults = searchResults.slice(indexOfFirstColl, indexOfLastColl);
     //
     //     const paginate = pageNumber => setCurrentPage(pageNumber)
     // }

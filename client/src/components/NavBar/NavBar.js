@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {NavLink, useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import './NavBar.css';
 
@@ -17,10 +17,11 @@ export const Navbar = () => {
     return (
         <nav>
             <div className="nav-wrapper navbar" style={{ padding: '0 2rem' }}>
-                <span className="brand-logo"><img alt="logo" src="https://mcdn.wallpapersafari.com/medium/72/34/ECT6hw.png"/></span>
+                <a href={'https://api.nasa.gov/'} className="brand-logo"><img alt="logo" src="https://mcdn.wallpapersafari.com/medium/72/34/ECT6hw.png"/></a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><NavLink to="/collections">Collections</NavLink></li>
-                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#my-collections">My coll</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/" onClick={logoutHandler}>Logout</a></li>
                 </ul>
             </div>

@@ -4,7 +4,6 @@ import {AuthPage} from "./pages/AuthPage/AuthPage";
 import CollectionsPage from "./pages/CollectionsPage/CollectionsPage";
 import Home from "./pages/Home/Home";
 
-
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated) {
         return (
@@ -12,7 +11,10 @@ export const useRoutes = isAuthenticated => {
                 <Route path='/' exact>
                     <Home />
                 </Route>
-                <Route path="/collections" exact>
+                <Route path="/" exact>
+                    {/*<MyCollectionsPage />*/}
+                </Route>
+                <Route path="/" exact>
                     <CollectionsPage />
                 </Route>
                 <Redirect to="/" />

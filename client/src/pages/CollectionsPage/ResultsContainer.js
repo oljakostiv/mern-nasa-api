@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Result from '../../components/Result/Result';
 import PropTypes from 'prop-types';
+import Result from '../../components/Result/Result';
 import './style.css'
 
 export default class ResultsContainer extends Component {
