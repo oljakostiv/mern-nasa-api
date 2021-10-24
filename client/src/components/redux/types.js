@@ -1,3 +1,0 @@
-export const CREATE_COLLECTION = 'CREATE_COLLECTION'
-
-
