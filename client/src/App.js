@@ -6,7 +6,6 @@ import {Loader} from "./components/Loader/Loader";
 import Footer from "./components/Footer/Footer";
 import {useAuth} from './hooks/auth.hook';
 import {useRoutes} from './routes';
-
 import 'materialize-css';
 function App() {
     const {token, login, logout, userId, ready} = useAuth();
