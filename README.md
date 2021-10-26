@@ -8,7 +8,7 @@
 
 In the project directory, you can run:
 
-### `npm run dev`
+### `docker-compose up`
 
 # Screen:
 
