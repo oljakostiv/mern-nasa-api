@@ -5,8 +5,7 @@ const {
 
 const authUserValidator = Joi.object({
     email: Joi.string()
-        .regex(EMAIL_REGEXP)
-        .trim(),
+        .regex(EMAIL_REGEXP),
     password: Joi.string()
         .regex(PASSWORD_REGEXP)
 });

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const expressRateLimit = require('express-rate-limit');
 
-const {PORT, mongoUri} = require('./config/variables');
+const { PORT, mongoUri } = require('./config/variables');
 
 mongoose.connect(mongoUri,{
     useNewUrlParser: true,

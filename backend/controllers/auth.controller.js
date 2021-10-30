@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const {validationResult} = require('express-validator');
-const {jwtSecret} = require('../config/variables');
+// const {validationResult} = require('express-validator');
+const { jwtSecret } = require('../config/variables');
 const User = require('../dataBase/User');
 
 module.exports = {
