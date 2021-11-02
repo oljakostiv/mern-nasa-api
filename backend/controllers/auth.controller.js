@@ -7,15 +7,6 @@ const User = require('../dataBase/User');
 module.exports = {
     register: async (req, res) => {
         try {
-            // const errors = validationResult(req);
-            //
-            // if (!errors.isEmpty()) {
-            //     return res.status(400).json({
-            //         errors: errors.array(),
-            //         message: 'Incorrect data registration!'
-            //     })
-            // }
-
             const {email, password} = req.body;
 
             const candidate = await User.findOne({email});
@@ -37,15 +28,6 @@ module.exports = {
 
     login: async (req, res) => {
         try {
-            // const errors = validationResult(req);
-            //
-            // if (!errors.isEmpty()) {
-            //     return res.status(400).json({
-            //         errors: errors.array(),
-            //         message: 'Incorrect login data!'
-            //     })
-            // }
-
             const {email, password} = req.body;
 
             const user = await User.findOne({email});
