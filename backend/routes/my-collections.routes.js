@@ -1,4 +1,4 @@
-const {Router} = require('express');
+const { Router } = require('express');
 const router = Router();
 const collectionsCtrl = require('../controllers/my-collections.controller');
 const { checkAuth } = require('../middlewares/my-collections.middleware');
