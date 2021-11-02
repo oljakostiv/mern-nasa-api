@@ -72,6 +72,7 @@ export const AuthPage = () => {
                                     onChange={changeHandler}
                                 />
                                 <label htmlFor="password">Password</label>
+                                <span><i>(at least one: digit, lower&upper case, symbol)</i></span>
                             </div>
 
                         </form>
