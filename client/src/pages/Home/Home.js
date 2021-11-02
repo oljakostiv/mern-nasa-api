@@ -10,7 +10,7 @@ export default function Home() {
                     <div className="position">
                         <div className="col s12 p5r">
                             <div className="card blue-grey darken-1 card-backend">
-                                <div className="card-content white-text">
+                                <div className="card-content dn white-text">
                                     <span className="card-title">Welcome!</span>
                                     <p className='pth'><b>Mars</b> is the fourth planet from the Sun – a dusty, cold, desert world with
                                         a very thin atmosphere. Mars is also a dynamic planet with seasons, polar ice

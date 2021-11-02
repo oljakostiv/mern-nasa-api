@@ -65,7 +65,7 @@ input.yellow-input:focus {
         max-height: 390px;
     }
 
-    .pth, .card-content {
+    .pth, .dn {
         display: none;
     }
 }
